@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import json
-from selenium.webdriver.support.ui import WebDriverWait
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -22,7 +22,6 @@ class Bumper:
         self.driver.maximize_window()
         self.driver.get(homepage_URL)
         self.driver.find_element_by_id('acceptPrivacyPolicy').click()
-        #while(True):
         user = get_credentials()
         self.driver.find_element_by_id('header-email').send_keys(user['email'])
         self.driver.find_element_by_id('header-password').send_keys(user['password'])
@@ -61,12 +60,11 @@ class Bumper:
                         waitTime += ago 
                         break       
                 waitTime = abs(float(waitTime - 960))        
-                print('wait for: ', waitTime/float(60) , ' minutes')
-                continue
-            else:
-                bump.click()
-                WebDriverWait(self.driver, 5)
-                self.driver.find_element_by_xpath('/html/body/div[2]').click()                   
+                print('wait for: ', waitTime/float(60) , ' minutes')                
+            else:    
+                bump.click()  
+                time.sleep(1)
+                self.driver.find_element_by_xpath('/html/body/div[2]/div').click()                                          
                 
 def main():
     bumper = Bumper()
