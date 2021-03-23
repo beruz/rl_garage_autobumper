@@ -1,7 +1,7 @@
 # Rocket League Garage Trade Bumper
 Rocket League Garage trade bumper using Python and Selenium <br>
 I had a lot of trade posts on RL Garage so I wanted to bump my trades automatically instead of clicking bump in each post. This is the first time I am using Selenium.
-After running the program, you can decide on the bump frequency of your trades by entering a desired time that is 16 minutes or larger since RL Garage allows 
+After running the program, you can decide on the bump frequency of your trades by entering a desired time that is 16 minutes or greater since RL Garage allows 
 users to bump trades every 15 minutes.
 
 ## Usage
