@@ -22,8 +22,5 @@ conda install --file requirements.txt
 ```
 7. Run the file and your trades will be automatically bumped :)
 
-## Future Work 
-Add cooldown timer so code can run in the background and bumps the trades every 15 or any desired minute.
-
 ## Contribution
-The code can be used for personal usage and comments/feedbacks are welcome!
+The code can be used for personal usage and comments/feedbacks/improvements are welcome!
